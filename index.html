@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genesis</title>
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+ <input id="email" type="email" placeholder="Ingresa tu Email">
+ <input id="password" type="password" placeholder="Ingresa tu password">
+ <button onclick="ingresar()" >Ingresar</button>
+ <hr>
+ <button onclick="registrar()" >registrate</button>
+ <hr>
+<div id="contenido"></div>
+
+ <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+ <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAl53XQTTqh9ZKSzhhI6CCPGrxjA0ZJrD4",
+        authDomain: "dbgenesis-423f3.firebaseapp.com",
+        databaseURL: "https://dbgenesis-423f3.firebaseio.com",
+        projectId: "dbgenesis-423f3",
+        storageBucket: "",
+        messagingSenderId: "34190671996"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <!--CdN jquery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- JS Iconos-->
+    <script src="https://use.fontawesome.com/e93f958285.js"></script>
+    <!-- JS Booptrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+
+  </html>
