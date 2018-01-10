@@ -48,10 +48,11 @@ function observador(){
   .onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
-    aparece();
+    aparece(user); // se envia el parametro user a la funcion aparece
     console.log('Existe usuario activo');
     var displayName = user.displayName;
     var email = user.email;
+    console.log('Correo verificado: ' + user.emailVerified); 
     var emailVerified = user.photoURL;
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
@@ -65,14 +66,18 @@ function observador(){
 observador(); //se ejecutacuando se carga la practica
 
 /*Contenido para usuarios logueados*/
-function aparece(){
+function aparece(user){ //parametro user recibido desde el observador
+  var user = user;
   var contenido = document.getElementById('contenido');
+    if (user.emailVerified) {
+        /*Comillas especiales nos permiten hacer template donde podemos escribir codigo html en el codigo javascript*/
+      contenido.innerHTML = `
+      <p>Bienvenido</p>  
+      <button onclick="cerrar()">Cerrar sesión</button>
+      `;
+    }
   //contenido.innerHTML = 'prueba del perfil usuario';
-  /*Comillas especiales nos permiten hacer template donde podemos escribir codigo html en el codigo javascript*/
-  contenido.innerHTML = `<p>Bienvenido</p>  
-  <button onclick="cerrar()">Cerrar sesión</button>
 
-  `;
 }
 /*Funcion para desloguearse Pendiente de terminar*/
 function cerrar(){
